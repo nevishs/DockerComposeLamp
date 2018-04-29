@@ -1,0 +1,22 @@
+version: '2'
+services:
+  php:
+    build: ./php
+    restart: always
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db:dockerdb
+    ports:
+      - 8080:80
+
+  db:
+    build: ./mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: database
