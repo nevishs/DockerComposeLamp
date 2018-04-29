@@ -1,22 +1,21 @@
 version: '2'
 services:
-  php:
-    build: ./php
-    restart: always
+  web:
+    image: nevishs/5.6-apache
     volumes:
-      - ./www:/var/www/html
+      - /tmp/DockerComposeLamp/www:/var/www/html
     links:
       - db:dockerdb
     ports:
-      - 8080:80
+      - 80:80
 
   db:
-    build: ./mysql
-    restart: always
+    image: nevishs/5.7-mysql
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: admin
-      MYSQL_PASSWORD: 1234
+      MYSQL_PASSWORD: pass
       MYSQL_DATABASE: database
+
