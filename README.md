@@ -1,5 +1,3 @@
-# Under Constructions
-
 # Docker Compose Lamp (Apache2, MySQL, PHP)
 
 ## In this project you will:
@@ -30,3 +28,6 @@ __Step 3__: Interact with the site
 ```
 > http://127.0.0.1/
 ```
+
+
+# More to add soon
