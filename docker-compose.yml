@@ -5,7 +5,7 @@ services:
     volumes:
       - /tmp/DockerComposeLamp/www:/var/www/html
     links:
-      - db:dockerdb
+      - db:test
     ports:
       - 80:80
 
@@ -17,5 +17,5 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: admin
       MYSQL_PASSWORD: pass
-      MYSQL_DATABASE: database
+      MYSQL_DATABASE: test
 
