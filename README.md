@@ -26,7 +26,7 @@ __Step 2__: Run Docker Compose
 __Step 3__: Interact with the site
 > Note: test out the functionality
 ```
-> http://127.0.0.1/
+> http://127.0.0.1/public
 ```
 
 
